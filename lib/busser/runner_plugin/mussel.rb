@@ -6,7 +6,7 @@ require "busser/runner_plugin"
 
 class Busser::RunnerPlugin::Mussel < Busser::RunnerPlugin::Base
   postinstall do
-    FileUtils.ln_sf(suite_path('musselrc'), "/root/.musselrc")
+    FileUtils.ln_sf("#{suite_path('mussel')}/musselrc", "/root/.musselrc")
   end
 
   def test
